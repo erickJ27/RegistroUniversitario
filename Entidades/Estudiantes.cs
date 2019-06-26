@@ -12,14 +12,14 @@ namespace RegistroUniversitario.Entidades
         [Key]
         public int EstudianteId { get; set; }
         public DateTime FechaIngreso { get; set; }
-        public string Nombre { get; set; }
+        public string Nombres { get; set; }
         public decimal Balance { get; set; }
 
         public Estudiantes()
         {
             EstudianteId = 0;
             FechaIngreso = DateTime.Now;
-            Nombre = string.Empty;
+            Nombres = string.Empty;
             Balance = 0;
         }
 
