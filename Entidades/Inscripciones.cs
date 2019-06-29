@@ -23,5 +23,7 @@ namespace RegistroUniversitario.Entidades
             Monto = 0;
         }
 
+        
+
     }
 }

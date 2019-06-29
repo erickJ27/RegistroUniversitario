@@ -11,8 +11,9 @@ namespace RegistroUniversitario.Entidades
     {
         [Key]
         public int Id { get; set; }
+        public int InscripcionId { get; set; }
         public int AsignaturaId { get; set; }
-
+        
         public int EstudianteId { get; set; }
 
         //Todo:Falta todavia algun otro campo
@@ -20,13 +21,15 @@ namespace RegistroUniversitario.Entidades
         public InscripcionesDetalle()
         {
             Id = 0;
+            InscripcionId = 0;
             AsignaturaId = 0;
             EstudianteId = 0;
         }
 
-        public InscripcionesDetalle(int Id,int AsignaturaId,int EstudianteId)
+        public InscripcionesDetalle(int Id,int InscripcionId,int AsignaturaId,int EstudianteId)
         {
             this.Id = Id;
+            this.InscripcionId = InscripcionId;
             this.AsignaturaId =AsignaturaId;
             this.EstudianteId =EstudianteId;
         }
