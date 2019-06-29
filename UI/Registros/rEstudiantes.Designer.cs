@@ -182,6 +182,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.IdNumericUpDown);
             this.Name = "rEstudiantes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "rEstudiantes";
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BalanceNumericUpDown)).EndInit();

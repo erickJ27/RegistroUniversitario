@@ -32,7 +32,6 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -87,18 +87,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(142, 20);
             this.dateTimePicker1.TabIndex = 5;
-            // 
-            // button1
-            // 
-            this.button1.Image = global::RegistroUniversitario.Properties.Resources.search2_icon;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(278, 16);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 42);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Buscar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -235,6 +223,18 @@
             this.button6.Text = "Eliminar";
             this.button6.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Image = global::RegistroUniversitario.Properties.Resources.search2_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(278, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 42);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Buscar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // rInscripciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,6 +254,7 @@
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label1);
             this.Name = "rInscripciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "rInscripciones";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox1.ResumeLayout(false);

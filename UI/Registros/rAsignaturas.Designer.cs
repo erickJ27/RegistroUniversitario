@@ -154,6 +154,7 @@
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label1);
             this.Name = "rAsignaturas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "rAsignaturas";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();

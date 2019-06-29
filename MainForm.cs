@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RegistroUniversitario.UI.Registros;
 
 namespace RegistroUniversitario
 {
@@ -15,6 +16,26 @@ namespace RegistroUniversitario
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void EstudianteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rEstudiantes ver= new rEstudiantes();
+
+            ver.Show();
+
+        }
+
+        private void AsignaturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rAsignaturas ver = new rAsignaturas();
+            ver.Show();
+        }
+
+        private void InscripcionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rInscripciones ver =new rInscripciones();
+            ver.Show();
         }
     }
 }
