@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.IdNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,8 +41,10 @@
             this.NuevoButton = new System.Windows.Forms.Button();
             this.BuscarButton = new System.Windows.Forms.Button();
             this.BalanceNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BalanceNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // IdNumericUpDown
@@ -114,6 +117,7 @@
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // GuardarButton
             // 
@@ -126,6 +130,7 @@
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // NuevoButton
             // 
@@ -138,6 +143,7 @@
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.NuevoButton.UseVisualStyleBackColor = true;
+            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
             // 
             // BuscarButton
             // 
@@ -150,6 +156,7 @@
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
             // BalanceNumericUpDown
             // 
@@ -163,6 +170,10 @@
             this.BalanceNumericUpDown.Name = "BalanceNumericUpDown";
             this.BalanceNumericUpDown.Size = new System.Drawing.Size(137, 20);
             this.BalanceNumericUpDown.TabIndex = 6;
+            // 
+            // MyErrorProvider
+            // 
+            this.MyErrorProvider.ContainerControl = this;
             // 
             // rEstudiantes
             // 
@@ -186,6 +197,7 @@
             this.Text = "rEstudiantes";
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BalanceNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,5 +217,6 @@
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.NumericUpDown BalanceNumericUpDown;
+        private System.Windows.Forms.ErrorProvider MyErrorProvider;
     }
 }
