@@ -124,11 +124,6 @@ namespace RegistroUniversitario.UI.Registros
                     MessageBox.Show("No fue posible guardar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-
-
-                
-            
-
             Limpiar();
         }
 
