@@ -12,15 +12,17 @@ using System.Windows.Forms;
 
 namespace RegistroUniversitario.UI.Consultas
 {
-    public partial class cAsignatura : Form
+    public partial class cAsignaturas : Form
     {
-        public cAsignatura()
+        public cAsignaturas()
         {
             InitializeComponent();
+            FiltroComboBox.Text = "Todo";
         }
-
+        
         private void BuscarButton_Click(object sender, EventArgs e)
         {
+            
             var listado = new List<Asignaturas>();
             Repositorio<Asignaturas> db = new Repositorio<Asignaturas>();
 

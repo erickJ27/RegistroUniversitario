@@ -35,21 +35,21 @@
             this.FechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.EliminarFilaButton = new System.Windows.Forms.Button();
             this.AgregarDetalleButton = new System.Windows.Forms.Button();
             this.DetalleDataGridView = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.PrecioCreditoNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.EliminarButton = new System.Windows.Forms.Button();
-            this.GuardarButton = new System.Windows.Forms.Button();
-            this.NuevoButton = new System.Windows.Forms.Button();
-            this.BuscarButton = new System.Windows.Forms.Button();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.AsignaturaComboBox = new System.Windows.Forms.ComboBox();
             this.EstudianteComboBox = new System.Windows.Forms.ComboBox();
             this.MontoTextBox = new System.Windows.Forms.TextBox();
+            this.EliminarButton = new System.Windows.Forms.Button();
+            this.GuardarButton = new System.Windows.Forms.Button();
+            this.NuevoButton = new System.Windows.Forms.Button();
+            this.EliminarFilaButton = new System.Windows.Forms.Button();
+            this.BuscarButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DetalleDataGridView)).BeginInit();
@@ -60,7 +60,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 18);
+            this.label1.Location = new System.Drawing.Point(34, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(16, 13);
             this.label1.TabIndex = 0;
@@ -68,7 +68,7 @@
             // 
             // IdNumericUpDown
             // 
-            this.IdNumericUpDown.Location = new System.Drawing.Point(120, 16);
+            this.IdNumericUpDown.Location = new System.Drawing.Point(120, 30);
             this.IdNumericUpDown.Name = "IdNumericUpDown";
             this.IdNumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.IdNumericUpDown.TabIndex = 1;
@@ -76,7 +76,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 45);
+            this.label2.Location = new System.Drawing.Point(34, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 2;
@@ -86,7 +86,7 @@
             // 
             this.FechaDateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaDateTimePicker.Location = new System.Drawing.Point(120, 42);
+            this.FechaDateTimePicker.Location = new System.Drawing.Point(120, 56);
             this.FechaDateTimePicker.Name = "FechaDateTimePicker";
             this.FechaDateTimePicker.Size = new System.Drawing.Size(142, 20);
             this.FechaDateTimePicker.TabIndex = 5;
@@ -116,19 +116,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle";
             // 
-            // EliminarFilaButton
-            // 
-            this.EliminarFilaButton.Image = global::RegistroUniversitario.Properties.Resources.Button_Close_icon;
-            this.EliminarFilaButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EliminarFilaButton.Location = new System.Drawing.Point(10, 271);
-            this.EliminarFilaButton.Name = "EliminarFilaButton";
-            this.EliminarFilaButton.Size = new System.Drawing.Size(89, 37);
-            this.EliminarFilaButton.TabIndex = 7;
-            this.EliminarFilaButton.Text = "Eliminar fila";
-            this.EliminarFilaButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.EliminarFilaButton.UseVisualStyleBackColor = true;
-            this.EliminarFilaButton.Click += new System.EventHandler(this.EliminarFilaButton_Click);
-            // 
             // AgregarDetalleButton
             // 
             this.AgregarDetalleButton.Location = new System.Drawing.Point(345, 34);
@@ -150,7 +137,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 74);
+            this.label6.Location = new System.Drawing.Point(34, 85);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 13);
             this.label6.TabIndex = 4;
@@ -168,7 +155,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 100);
+            this.label3.Location = new System.Drawing.Point(34, 114);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 13);
             this.label3.TabIndex = 10;
@@ -176,10 +163,37 @@
             // 
             // PrecioCreditoNumericUpDown
             // 
-            this.PrecioCreditoNumericUpDown.Location = new System.Drawing.Point(120, 98);
+            this.PrecioCreditoNumericUpDown.Location = new System.Drawing.Point(120, 112);
             this.PrecioCreditoNumericUpDown.Name = "PrecioCreditoNumericUpDown";
             this.PrecioCreditoNumericUpDown.Size = new System.Drawing.Size(135, 20);
             this.PrecioCreditoNumericUpDown.TabIndex = 11;
+            // 
+            // MyErrorProvider
+            // 
+            this.MyErrorProvider.ContainerControl = this;
+            // 
+            // AsignaturaComboBox
+            // 
+            this.AsignaturaComboBox.FormattingEnabled = true;
+            this.AsignaturaComboBox.Location = new System.Drawing.Point(95, 35);
+            this.AsignaturaComboBox.Name = "AsignaturaComboBox";
+            this.AsignaturaComboBox.Size = new System.Drawing.Size(121, 21);
+            this.AsignaturaComboBox.TabIndex = 13;
+            // 
+            // EstudianteComboBox
+            // 
+            this.EstudianteComboBox.FormattingEnabled = true;
+            this.EstudianteComboBox.Location = new System.Drawing.Point(120, 85);
+            this.EstudianteComboBox.Name = "EstudianteComboBox";
+            this.EstudianteComboBox.Size = new System.Drawing.Size(135, 21);
+            this.EstudianteComboBox.TabIndex = 16;
+            // 
+            // MontoTextBox
+            // 
+            this.MontoTextBox.Location = new System.Drawing.Point(216, 280);
+            this.MontoTextBox.Name = "MontoTextBox";
+            this.MontoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.MontoTextBox.TabIndex = 14;
             // 
             // EliminarButton
             // 
@@ -220,11 +234,24 @@
             this.NuevoButton.UseVisualStyleBackColor = true;
             this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
             // 
+            // EliminarFilaButton
+            // 
+            this.EliminarFilaButton.Image = global::RegistroUniversitario.Properties.Resources.Button_Close_icon;
+            this.EliminarFilaButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EliminarFilaButton.Location = new System.Drawing.Point(10, 271);
+            this.EliminarFilaButton.Name = "EliminarFilaButton";
+            this.EliminarFilaButton.Size = new System.Drawing.Size(89, 37);
+            this.EliminarFilaButton.TabIndex = 7;
+            this.EliminarFilaButton.Text = "Eliminar fila";
+            this.EliminarFilaButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.EliminarFilaButton.UseVisualStyleBackColor = true;
+            this.EliminarFilaButton.Click += new System.EventHandler(this.EliminarFilaButton_Click);
+            // 
             // BuscarButton
             // 
             this.BuscarButton.Image = global::RegistroUniversitario.Properties.Resources.search2_icon;
             this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BuscarButton.Location = new System.Drawing.Point(278, 16);
+            this.BuscarButton.Location = new System.Drawing.Point(278, 30);
             this.BuscarButton.Name = "BuscarButton";
             this.BuscarButton.Size = new System.Drawing.Size(75, 42);
             this.BuscarButton.TabIndex = 6;
@@ -232,33 +259,6 @@
             this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BuscarButton.UseVisualStyleBackColor = true;
             this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
-            // 
-            // MyErrorProvider
-            // 
-            this.MyErrorProvider.ContainerControl = this;
-            // 
-            // AsignaturaComboBox
-            // 
-            this.AsignaturaComboBox.FormattingEnabled = true;
-            this.AsignaturaComboBox.Location = new System.Drawing.Point(95, 35);
-            this.AsignaturaComboBox.Name = "AsignaturaComboBox";
-            this.AsignaturaComboBox.Size = new System.Drawing.Size(121, 21);
-            this.AsignaturaComboBox.TabIndex = 13;
-            // 
-            // EstudianteComboBox
-            // 
-            this.EstudianteComboBox.FormattingEnabled = true;
-            this.EstudianteComboBox.Location = new System.Drawing.Point(120, 71);
-            this.EstudianteComboBox.Name = "EstudianteComboBox";
-            this.EstudianteComboBox.Size = new System.Drawing.Size(135, 21);
-            this.EstudianteComboBox.TabIndex = 16;
-            // 
-            // MontoTextBox
-            // 
-            this.MontoTextBox.Location = new System.Drawing.Point(216, 280);
-            this.MontoTextBox.Name = "MontoTextBox";
-            this.MontoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.MontoTextBox.TabIndex = 14;
             // 
             // rInscripciones
             // 

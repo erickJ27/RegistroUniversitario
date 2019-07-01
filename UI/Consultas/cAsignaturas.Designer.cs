@@ -1,6 +1,6 @@
 ﻿namespace RegistroUniversitario.UI.Consultas
 {
-    partial class cAsignatura
+    partial class cAsignaturas
     {
         /// <summary>
         /// Required designer variable.
@@ -57,6 +57,10 @@
             // FiltroComboBox
             // 
             this.FiltroComboBox.FormattingEnabled = true;
+            this.FiltroComboBox.Items.AddRange(new object[] {
+            "Todo",
+            "Id",
+            "Descripcion"});
             this.FiltroComboBox.Location = new System.Drawing.Point(37, 32);
             this.FiltroComboBox.Name = "FiltroComboBox";
             this.FiltroComboBox.Size = new System.Drawing.Size(157, 21);
@@ -91,7 +95,7 @@
             this.BuscarButton.UseVisualStyleBackColor = true;
             this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
-            // cAsignatura
+            // cAsignaturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -102,7 +106,8 @@
             this.Controls.Add(this.FiltroComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ConsultaDataGridView);
-            this.Name = "cAsignatura";
+            this.Name = "cAsignaturas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "cAsignatura";
             ((System.ComponentModel.ISupportInitialize)(this.ConsultaDataGridView)).EndInit();
             this.ResumeLayout(false);
