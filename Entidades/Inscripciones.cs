@@ -15,15 +15,29 @@ namespace RegistroUniversitario.Entidades
 
         public decimal Monto { get; set; }
 
-        public virtual List<InscripcionesDetalle> Detalle { get; set; }
+        public decimal PrecioCreditos { get; set; }
+
+        public int EstudianteId { get; set; }
+
+        public virtual List<InscripcionesDetalle> Asignaturas { get; set; }
         public Inscripciones()
         {
             InscripcionId = 0;
             Fecha = DateTime.Now;
             Monto = 0;
+            PrecioCreditos = 0;
+        }
+        public void CalcularMonto()
+        {
+            decimal total = 0;
+            foreach (var item in Asignaturas)
+            {
+                total += item.SubTotal;
+            }
+            Monto = total;
         }
 
-        
+
 
     }
 }

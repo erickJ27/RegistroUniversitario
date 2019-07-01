@@ -13,6 +13,10 @@ namespace RegistroUniversitario.BLL
     {
         internal Contexto _contexto;
 
+        public Repositorio(Contexto contexto)
+        {
+            _contexto = contexto;
+        }
         public Repositorio()
         {
             _contexto = new Contexto();

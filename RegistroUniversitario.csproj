@@ -70,6 +70,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Consultas\cAsignatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\cAsignatura.Designer.cs">
+      <DependentUpon>cAsignatura.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\rAsignaturas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Consultas\cAsignatura.resx">
+      <DependentUpon>cAsignatura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rAsignaturas.resx">
       <DependentUpon>rAsignaturas.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,9 +133,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UI\Consultas\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\search2-icon.png" />
   </ItemGroup>
@@ -138,6 +145,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delete2-file-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Close-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
