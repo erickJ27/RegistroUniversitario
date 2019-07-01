@@ -14,8 +14,8 @@ namespace RegistroUniversitario.UI.Registros
 {
     public partial class rInscripciones : Form
     {
-        
-        public List<InscripcionesDetalle> Detalle { get; set; }
+
+        public List<InscripcionesDetalle> Detalle;
         public rInscripciones()
         {
             InitializeComponent();
@@ -102,12 +102,14 @@ namespace RegistroUniversitario.UI.Registros
         private Inscripciones LlenarClase()
         {
             Inscripciones inscripciones = new Inscripciones();
+            inscripciones.Asignaturas = this.Detalle;
+
             inscripciones.InscripcionId = (int)IdNumericUpDown.Value;
+            inscripciones.EstudianteId = (int)EstudianteComboBox.SelectedValue;
             inscripciones.Fecha = FechaDateTimePicker.Value;
             inscripciones.PrecioCreditos = PrecioCreditoNumericUpDown.Value;
             inscripciones.CalcularMonto();
 
-            inscripciones.Asignaturas = this.Detalle;
 
             return inscripciones;
         }
@@ -125,6 +127,7 @@ namespace RegistroUniversitario.UI.Registros
             MontoTextBox.Text = inscripciones.Monto.ToString();
             PrecioCreditoNumericUpDown.Value = (decimal)inscripciones.PrecioCreditos;
             FechaDateTimePicker.Value = inscripciones.Fecha;
+            Detalle = new List<InscripcionesDetalle>();
             this.Detalle = inscripciones.Asignaturas;
             CargarGrid();
 
@@ -173,6 +176,7 @@ namespace RegistroUniversitario.UI.Registros
 
         private void AgregarDetalleButton_Click(object sender, EventArgs e)
         {
+            List<InscripcionesDetalle> detalles = new List<InscripcionesDetalle>();
             Repositorio<Asignaturas> db = new Repositorio<Asignaturas>(new DAL.Contexto());
             if (AsignaturaComboBox.Text == "")
             {
