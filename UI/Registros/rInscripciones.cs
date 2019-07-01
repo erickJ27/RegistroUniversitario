@@ -47,7 +47,7 @@ namespace RegistroUniversitario.UI.Registros
             var lista = new List<Estudiantes>();
             lista= db.GetList(l => true);
             EstudianteComboBox.DataSource = lista;
-            EstudianteComboBox.DisplayMember = "Nombre";
+            EstudianteComboBox.DisplayMember = "Nombres";
             EstudianteComboBox.ValueMember = "EstudianteId";
         }
         private void Limpiar()
@@ -79,14 +79,14 @@ namespace RegistroUniversitario.UI.Registros
 
             if (PrecioCreditoNumericUpDown.Value == 0)
             {
-                MyErrorProvider.SetError(PrecioCreditoNumericUpDown, "Debes elegir un monto de creditos");
+                MyErrorProvider.SetError(PrecioCreditoNumericUpDown, "Debes elegir el precio de los creditos");
                 PrecioCreditoNumericUpDown.Focus();
                 paso = false;
             }
 
             if (Detalle.Count == 0)
             {
-                MyErrorProvider.SetError(AsignaturaComboBox, "La inscripcion por lo menos debe tener una asignatura");
+                MyErrorProvider.SetError(AsignaturaComboBox, "La inscripcion tiene que tener 1 0 mas asignaturas");
                 AsignaturaComboBox.Focus();
                 paso = false;
             }
@@ -105,7 +105,7 @@ namespace RegistroUniversitario.UI.Registros
             inscripciones.InscripcionId = (int)IdNumericUpDown.Value;
             inscripciones.Fecha = FechaDateTimePicker.Value;
             inscripciones.PrecioCreditos = PrecioCreditoNumericUpDown.Value;
-            inscripciones.Monto = Convert.ToDecimal(MontoTextBox.Text);
+            inscripciones.CalcularMonto();
 
             inscripciones.Asignaturas = this.Detalle;
 
@@ -176,7 +176,7 @@ namespace RegistroUniversitario.UI.Registros
             Repositorio<Asignaturas> db = new Repositorio<Asignaturas>(new DAL.Contexto());
             if (AsignaturaComboBox.Text == "")
             {
-                MyErrorProvider.SetError(AsignaturaComboBox, "Debe elegir una asignatura");
+                MyErrorProvider.SetError(AsignaturaComboBox, "debe Elegir una asignatura o mas");
                 AsignaturaComboBox.Focus();
 
             }
@@ -213,6 +213,11 @@ namespace RegistroUniversitario.UI.Registros
         private void EliminarButton_Click(object sender, EventArgs e)
         {
             Repositorio<Inscripciones> db = new Repositorio<Inscripciones>(new DAL.Contexto());
+            if (!ExisteEnLaBaseDeDatos())
+            {
+                MessageBox.Show("No se puede Eliminar un usuario que no existe", "fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             MyErrorProvider.Clear();
             int id;
             int.TryParse(IdNumericUpDown.Text, out id);
