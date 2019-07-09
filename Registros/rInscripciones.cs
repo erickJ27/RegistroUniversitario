@@ -7,9 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL;
-using Entidades;
-using DAL;
+using RegistroUniversitario.BLL;
+using RegistroUniversitario.Entidades;
 
 namespace RegistroUniversitario.UI.Registros
 {

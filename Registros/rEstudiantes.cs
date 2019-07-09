@@ -1,5 +1,5 @@
-﻿using BLL;
-using Entidades;
+﻿using RegistroUniversitario.BLL;
+using RegistroUniversitario.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

@@ -47,7 +47,7 @@
             this.consultaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(573, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -95,28 +95,28 @@
             // estudiantesToolStripMenuItem
             // 
             this.estudiantesToolStripMenuItem.Name = "estudiantesToolStripMenuItem";
-            this.estudiantesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.estudiantesToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.estudiantesToolStripMenuItem.Text = "Estudiantes";
             this.estudiantesToolStripMenuItem.Click += new System.EventHandler(this.EstudiantesToolStripMenuItem_Click);
             // 
             // asignaturasToolStripMenuItem
             // 
             this.asignaturasToolStripMenuItem.Name = "asignaturasToolStripMenuItem";
-            this.asignaturasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.asignaturasToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.asignaturasToolStripMenuItem.Text = "Asignaturas";
             this.asignaturasToolStripMenuItem.Click += new System.EventHandler(this.AsignaturasToolStripMenuItem_Click);
             // 
             // inscripcionesToolStripMenuItem
             // 
             this.inscripcionesToolStripMenuItem.Name = "inscripcionesToolStripMenuItem";
-            this.inscripcionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.inscripcionesToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.inscripcionesToolStripMenuItem.Text = "Inscripciones";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(573, 246);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
